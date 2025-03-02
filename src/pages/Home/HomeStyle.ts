@@ -12,20 +12,20 @@ export const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 65%;
   height: 100%;
   background-color: var(--blue)};
 
   h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
     color: var(--white);
   }
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 `;
 
@@ -36,5 +36,10 @@ export const FormContainer = styled.div`
   align-items: center;
   width: 35%;
   height: 100%;
-  background-color: var(--white)};
+  background-color: var(--white);
+
+  div {
+    width: 60%;
+    height: 80%;
+  }
 `;

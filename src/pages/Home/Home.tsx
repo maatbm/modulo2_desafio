@@ -1,15 +1,19 @@
 import { Main, LogoContainer, FormContainer } from "./HomeStyle";
-import teachLogo from "../../../public/teachlogo.png";
+import logo from "../../assets/global/logo.png";
 
 export function Home() {
   return (
     <>
       <Main>
         <LogoContainer>
-          <img src={teachLogo} alt="logo do 3035 Teach"/>
-          <h1>Teach 3035</h1>
+          <img src={logo} alt="logo ds wtech"/>
+          <h1>wtech</h1>
         </LogoContainer>
-        <FormContainer></FormContainer>
+        <FormContainer>
+          <div>
+            <h1>Entrar</h1>
+          </div>
+        </FormContainer>
       </Main>
     </>
   );
