@@ -1,3 +1,4 @@
+import { FormUser } from "../../components/FormUser/FormUser";
 import { Main, LogoContainer, FormContainer } from "./HomeStyle";
 import logo from "../../assets/global/logo.png";
 
@@ -6,13 +7,11 @@ export function Home() {
     <>
       <Main>
         <LogoContainer>
-          <img src={logo} alt="logo ds wtech"/>
+          <img src={logo} alt="logo da wtech" />
           <h1>wtech</h1>
         </LogoContainer>
         <FormContainer>
-          <div>
-            <h1>Entrar</h1>
-          </div>
+          <FormUser />
         </FormContainer>
       </Main>
     </>

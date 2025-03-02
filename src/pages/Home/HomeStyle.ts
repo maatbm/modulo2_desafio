@@ -37,9 +37,4 @@ export const FormContainer = styled.div`
   width: 35%;
   height: 100%;
   background-color: var(--white);
-
-  div {
-    width: 60%;
-    height: 80%;
-  }
 `;
