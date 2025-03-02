@@ -1,7 +1,14 @@
-export function Error() {
+import { Container } from "./ErrorStyle";
+
+interface Props{
+  error?: string;
+}
+
+export function Error({error}: Props) {
   return (
-    <div>
-      <h1>Erro</h1>
-    </div>
+    <Container>
+      <h2>Ops!</h2>
+      <p>{error}</p>
+    </Container>
   );
 }

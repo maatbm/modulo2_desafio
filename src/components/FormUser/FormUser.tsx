@@ -4,27 +4,37 @@ import { UserContext } from "../../contexts/UserContext";
 import { Error } from "../Error/Error";
 import { Container } from "./FormUserStyle";
 
+interface ErrorMessage {
+  status: boolean;
+  message?: string;
+}
+
 export function FormUser() {
   const [Username, setUsername] = useState<string>("");
-  const [error, setError] = useState<boolean>(false);
+  const [error, setError] = useState<ErrorMessage | null>(null);
   const userContext = useContext(UserContext);
 
   async function getUserdata() {
-    try {
-      const response = await GetUser({ UserName: Username });
-      if (userContext) {
-        userContext.setUserData(response.data);
-        setError(false);
+    if (Username === "") {
+      setError({ status: true, message: "O campo usuário não pode ser vazio" });
+    } else {
+      setError({ status: false});
+      try {
+        const response = await GetUser({ UserName: Username });
+        if (userContext) {
+          userContext.setUserData(response.data);
+          setError({ status: false});
+        }
+      } catch (error) {
+        setError({ status: true, message: "Erro ao consultar o usuário" });
       }
-    } catch (error) {
-      setError(true);
     }
   }
 
   return (
     <Container>
       <h1>Entrar</h1>
-      {error && <Error />}
+      {error?.status && <Error error={error.message} />}
       <div>
         <label htmlFor="UserInput0">Usuário</label>
         <input
@@ -32,9 +42,10 @@ export function FormUser() {
           type="text"
           placeholder="Digite aqui seu usuário do GitHub"
           onChange={(e) => setUsername(e.target.value)}
-          required
         />
-        <button type="submit" onClick={getUserdata}>Entrar</button>
+        <button type="submit" onClick={getUserdata}>
+          Entrar
+        </button>
       </div>
     </Container>
   );
