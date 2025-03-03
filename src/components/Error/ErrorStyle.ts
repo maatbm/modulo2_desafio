@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   padding: 1rem;
+  margin-bottom: 1rem;
   background-color: var(--orange);
   border-radius: 1.5rem;
 

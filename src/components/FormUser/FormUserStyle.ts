@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface h1Props {
+  display?: string;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,14 +11,6 @@ export const Container = styled.div`
   justify-content: center;
   width: 60%;
   height: 80%;
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--black);
-    font-family: "Inter", sans-serif;
-    margin-bottom: 2rem;
-  }
 
   div {
     display: flex;
@@ -53,9 +49,18 @@ export const Container = styled.div`
       margin-top: 1.5rem;
       transition: 0.3s;
 
-      &:hover{
+      &:hover {
         background-color: var(--dark-blue);
       }
     }
   }
+`;
+
+export const H1 = styled.h1<h1Props>`
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  font-family: "Inter", sans-serif;
+  margin-bottom: 2rem;
+  display: ${(props) => props.display};
 `;
