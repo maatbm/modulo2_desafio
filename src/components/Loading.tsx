@@ -3,7 +3,8 @@ import { Container } from "../styles/components/LoadingStyle";
 export function Loading() {
   return (
     <Container>
-      <p>Loading...</p>
+      <div></div>
+      <h3>Carregando...</h3>
     </Container>
   );
 }

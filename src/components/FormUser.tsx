@@ -58,6 +58,7 @@ export function FormUser() {
             type="text"
             placeholder="Digite aqui seu usuário do GitHub"
             onChange={(e) => setUsername(e.target.value)}
+            autoComplete="off"
           />
           <button onClick={getUserdata}>Entrar</button>
         </div>
