@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { Header, Loading, RepoCard, UserCard } from "../components/index";
 import { RepoContext } from "../contexts/ReposContext";
-
 import { Container, Main, ReposContainer } from "../styles/pages/UserPageStyle";
 
 export function UserPage() {

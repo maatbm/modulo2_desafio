@@ -7,7 +7,7 @@ interface UserNameProps {
 export async function GetUser({UserName}: UserNameProps) {
     try {
         const response = await API.get(`/${UserName}`);
-        return response;
+        return response.data;
     } catch (error) {
         throw new Error(error as string);
     }
