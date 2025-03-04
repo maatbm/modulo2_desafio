@@ -8,7 +8,7 @@ interface Props {
 
 export function RepoCard(UserData: Props) {
   return (
-    <Container>
+    <Container role="button">
       <h3>Repositório {UserData.index}</h3>
       <hr />
       <div>

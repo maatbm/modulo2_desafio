@@ -11,10 +11,19 @@ export const Container = styled.div`
     width: 40px;
     height: 40px;
     margin-left: 2rem;
+    transiton: 0.5s;
   }
 
   h2 {
     color: var(--blue);
     font-family: "Quicksand", sans-serif;
+  }
+
+  #goBack {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `;
