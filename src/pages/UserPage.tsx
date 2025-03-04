@@ -32,11 +32,12 @@ export function UserPage() {
             {repoContext?.loading && <Loading />}
             {repoContext?.error && <p>{repoContext?.error}</p>}
             <div>
-              {repoContext?.repos.map((repo) => (
+              {repoContext?.repos.map((repo, index) => (
                 <RepoCard
                   key={repo.id}
                   name={repo.name}
                   description={repo.description || "Sem descrição"}
+                  index={(index+1)}
                 />
               ))}
             </div>

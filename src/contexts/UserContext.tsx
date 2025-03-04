@@ -17,8 +17,8 @@ interface UserContextType {
 }
 
 interface Error{
-    status?: boolean;
-    message?: string;
+  status?: boolean;
+  message?: string;
 }
 
 export const UserContext = createContext<UserContextType | null>({

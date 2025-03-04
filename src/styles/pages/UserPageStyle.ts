@@ -40,20 +40,14 @@ export const Container = styled.div`
 export const ReposContainer = styled.div`
   width: 100%;
   height: 100%;
-  display: grid;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   padding: 0;
   border: none;
   
-  div {
+  > div {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 0;
-    border: none;
+    gap: 2.5rem;
   }
 `;
