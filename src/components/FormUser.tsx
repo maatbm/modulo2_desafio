@@ -13,7 +13,7 @@ export function FormUser() {
   async function getUserdata() {
     const user = await userContext?.fetchUser(Username);
     if(user){
-      navigate(`/${user}`);
+      navigate(`/user/${user}`);
     }
   }
 

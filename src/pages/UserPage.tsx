@@ -38,6 +38,7 @@ export function UserPage() {
                   name={repo.name}
                   description={repo.description || "Sem descrição"}
                   index={(index+1)}
+                  repoID={repo.id}
                 />
               ))}
             </div>
