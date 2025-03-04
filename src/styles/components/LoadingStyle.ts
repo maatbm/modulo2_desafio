@@ -22,7 +22,7 @@ export const Container = styled.div`
     color: var(--black);
   }
 
-  div {
+  > div {
     width: 80px;
     height: 80px;
     margin-bottom: 1rem;

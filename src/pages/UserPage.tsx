@@ -28,10 +28,10 @@ export function UserPage() {
             />
           </div>
           <h1>Repositórios</h1>
-          <ReposContainer>
+          <ReposContainer $display_div={repoContext?.loading}>
             {repoContext?.loading && <Loading />}
             {repoContext?.error && <p>{repoContext?.error}</p>}
-            <div>
+            <div id="RepoCard">
               {repoContext?.repos.map((repo, index) => (
                 <RepoCard
                   key={repo.id}

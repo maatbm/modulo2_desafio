@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface display{
+  $display_div?: boolean;
+}
+
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,16 +41,17 @@ export const Container = styled.div`
   }
 `;
 
-export const ReposContainer = styled.div`
+export const ReposContainer = styled.div<display>`
   width: 100%;
   height: 100%;
   padding: 0;
   border: none;
+  display:block;
   
-  > div {
+  #RepoCard {
     width: 100%;
     height: 100%;
-    display: grid;
+    display: ${({$display_div})=>$display_div? "none":"grid"};
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
