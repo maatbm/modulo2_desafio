@@ -21,7 +21,7 @@ export function UserCard(UserData: Props) {
         <h3>Nome</h3>
         <p>{UserData.name}</p>
         <h3>Bio</h3>
-        <p>{UserData.bio}</p>
+        <p>{UserData.bio === null? "-----": UserData.bio}</p>
       </AboutContainer>
     </Container>
     </>
