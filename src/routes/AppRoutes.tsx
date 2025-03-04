@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, UserPage } from "../pages/index";
+import { Login, UserPage } from "../pages/index";
+import { RepoContextProvider } from "../contexts/ReposContext";
 
 export function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:username" element={<UserPage />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/:username" element={<RepoContextProvider><UserPage /></RepoContextProvider>} />
       </Routes>
     </BrowserRouter>
   );

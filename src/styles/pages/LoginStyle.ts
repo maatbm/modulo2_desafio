@@ -21,6 +21,7 @@ export const LogoContainer = styled.div`
     font-size: 5rem;
     font-weight: 700;
     color: var(--white);
+    font-family: "Quicksand", sans-serif;
   }
 
   img {
