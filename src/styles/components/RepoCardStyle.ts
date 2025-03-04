@@ -29,6 +29,6 @@ export const Container = styled.div`
     justify-content: center;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: var(--light-blue);
+    background-color: var(--light-gray);
   }
 `;
