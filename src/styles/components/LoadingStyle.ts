@@ -22,13 +22,10 @@ export const Container = styled.div`
     color: var(--black);
   }
 
-  > div {
+  > img {
     width: 80px;
     height: 80px;
     margin-bottom: 1rem;
-    border-radius: 50%;
-    border: none;
-    border-top: 6px solid var(--blue);
     animation: ${spin} 1s linear infinite;
   }
 `;

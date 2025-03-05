@@ -1,16 +1,28 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   background-color: var(--orange);
   border-radius: 1.5rem;
 
-  h2, p {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  h2,
+  p {
     color: var(--white);
+  }
+
+  div {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 `;

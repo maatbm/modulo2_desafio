@@ -1,6 +1,6 @@
 import { Container } from "../styles/components/HeaderStyle";
 import logo from "../../public/logo.png";
-import volta from "../assets/global/de-volta.png";
+import volta from "../assets/header/de-volta.png";
 import { useNavigate } from "react-router-dom";
 
 export function Header() {
