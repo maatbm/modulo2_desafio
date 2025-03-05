@@ -14,7 +14,7 @@ export const Main = styled.div`
   background-color: ${(props) => props.theme.colors.light_blue};
   padding: 2rem 3rem;
 
-  @media screen and (max-width: 481px) {
+  @media screen and (max-width: 719px) {
     padding: 1rem 0.7rem;
   }
 `;
@@ -44,7 +44,7 @@ export const Container = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media screen and (max-width: 481px) {
+  @media screen and (max-width: 719px) {
     padding: 1rem;
 
     h1 {
@@ -72,11 +72,11 @@ export const ReposContainer = styled.div<display>`
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
 
-    @media screen and (max-width: 481px) {
+    @media screen and (max-width: 719px) {
       grid-template-columns: 1fr;
     }
 
-    @media screen and (min-width: 482px) and (max-width: 1120px) {
+    @media screen and (min-width: 719px) and (max-width: 1120px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }

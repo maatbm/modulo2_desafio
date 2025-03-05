@@ -7,15 +7,16 @@ export const Container = styled.div`
   align-items: center;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  gap: 1.5rem;
   border: 1px solid ${(props) => props.theme.colors.black};
 
-  @media screen and (max-width: 481px) {
+  @media screen and (max-width: 719px) {
     width: 100%;
     padding: 0.6rem;
     flex-direction: column;
   }
 
-  @media screen and (min-width: 482px) and (max-width: 1120px) {
+  @media screen and (min-width: 719px) and (max-width: 1120px) {
     width: 100%;
     padding: 0.6rem;
   }
@@ -33,7 +34,7 @@ export const AvatarContainer = styled.div`
     margin: 0;
   }
 
-  @media screen and (max-width: 481px) {
+  @media screen and (max-width: 719px) {
     width: 100%;
     display: flex;
     align-items: center;
@@ -46,7 +47,7 @@ export const AvatarContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 482px) and (max-width: 1120px) {
+  @media screen and (min-width: 719px) and (max-width: 1120px) {
     width: 20%;
     display: flex;
     align-items: center;
@@ -83,7 +84,7 @@ export const AboutContainer = styled.div`
     margin-bottom: 1rem;
   }
 
-  @media screen and (max-width: 1120px) and (min-width: 481px){
+  @media screen and (max-width: 1120px) and (min-width: 719px) {
     padding: 0.8rem;
   }
 `;

@@ -35,6 +35,10 @@ export const LogoContainer = styled.div`
 
   @media screen and (max-width: 1279px) and (min-width: 482px) {
     width: 50%;
+
+    h1 {
+      font-size: 3rem;
+    }
   }
 `;
 
