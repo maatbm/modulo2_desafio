@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--black);
+  border: 1px solid ${(props) => props.theme.colors.black};
 
   @media screen and (max-width: 481px) {
     width: 100%;
@@ -72,14 +72,14 @@ export const AboutContainer = styled.div`
   h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--black);
+    color: ${(props) => props.theme.colors.black};
     margin-bottom: 0.5rem;
   }
 
   p {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--black);
+    color: ${(props) => props.theme.colors.black};
     margin-bottom: 1rem;
   }
 
@@ -87,3 +87,4 @@ export const AboutContainer = styled.div`
     padding: 0.8rem;
   }
 `;
+  

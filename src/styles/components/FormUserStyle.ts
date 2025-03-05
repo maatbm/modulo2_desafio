@@ -16,7 +16,7 @@ export const Container = styled.div<Props>`
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--black);
+    color: ${(props) => props.theme.colors.black};
     font-family: "Inter", sans-serif;
     margin-bottom: 2rem;
     display: ${(props) => (props.$display_h1 === true ? "none": "block")};
@@ -31,17 +31,17 @@ export const Container = styled.div<Props>`
     label {
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
-      color: var(--black);
+      color: ${(props) => props.theme.colors.black};
       font-family: "Inter", sans-serif;
     }
 
     input {
       width: 100%;
       height: 2rem;
-      border: 2px solid var(--gray);
+      border: 2px solid ${(props) => props.theme.colors.gray};
       border-radius: 5px;
       font-size: 1rem;
-      color: var(--black);
+      color: ${(props) => props.theme.colors.black};
       font-family: "Inter", sans-serif;
       text-align: center;
       outline: none;
@@ -50,17 +50,17 @@ export const Container = styled.div<Props>`
     button {
       padding: 0.5rem;
       border: none;
-      background-color: var(--blue);
+      background-color: ${(props) => props.theme.colors.blue};
       border-radius: 5px;
       cursor: pointer;
-      color: var(--white);
+      color: ${(props) => props.theme.colors.white};
       font-size: 1.2rem;
       font-weight: bold;
       margin-top: 1.5rem;
       transition: 0.3s;
 
       &:hover {
-        background-color: var(--dark-blue);
+        background-color: ${(props) => props.theme.colors.dark_blue};
       }
     }
   }

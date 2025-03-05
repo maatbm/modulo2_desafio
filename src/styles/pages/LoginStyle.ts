@@ -15,12 +15,12 @@ export const LogoContainer = styled.div`
   gap: 1rem;
   width: 65%;
   height: 100%;
-  background-color: var(--blue);
+  background-color: ${(props) => props.theme.colors.blue};
 
   h1 {
     font-size: 5rem;
     font-weight: 700;
-    color: var(--white);
+    color: ${(props) => props.theme.colors.white};
     font-family: "Quicksand", sans-serif;
   }
 
@@ -45,7 +45,7 @@ export const FormContainer = styled.div`
   align-items: center;
   width: 35%;
   height: 100%;
-  background-color: var(--white);
+  background-color: ${(props) => props.theme.colors.white};
 
   @media screen and (max-width: 481px) {
     width: 100%;

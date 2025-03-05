@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 1rem;
   margin-bottom: 0.5rem;
-  background-color: var(--orange);
+  background-color: ${(props) => props.theme.colors.orange};
   border-radius: 1.5rem;
 
   img {
@@ -17,7 +17,7 @@ export const Container = styled.div`
 
   h2,
   p {
-    color: var(--white);
+    color: ${(props) => props.theme.colors.white};
   }
 
   div {

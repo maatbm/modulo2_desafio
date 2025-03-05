@@ -8,7 +8,7 @@ export const Main = styled.div`
   width: 100%;
   min-height: 100vh;
   max-height: 100%;
-  background-color: var(--light-blue);
+  background-color: ${(props) => props.theme.colors.light_blue};
   padding: 2rem 3rem;
 
   @media screen and (max-width: 481px) {
@@ -21,13 +21,13 @@ export const Container = styled.div`
   height: 100%;
   border-radius: 0.5rem;
   padding: 3rem;
-  background-color: var(--white);
-  box-shadow: 0px 0px 10px var(--black);
+  background-color: ${(props) => props.theme.colors.white};
+  box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
 
   h1 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--black);
+    color: ${(props) => props.theme.colors.black};
     margin-bottom: 2rem;
     font-family: "Quicksand", sans-serif;
   }
@@ -53,29 +53,29 @@ export const Container = styled.div`
       gap: 1rem;
       padding: 1.5rem;
       border-radius: 0.5rem;
-      box-shadow: 0px 0px 10px var(--black);
+      box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
 
       hr {
         width: 100%;
-        border: 3px solid var(--blue);
+        border: 3px solid ${(props) => props.theme.colors.blue};
       }
 
       h2 {
         font-size: 1.5rem;
         font-weight: 700;
-        color: var(--black);
+        color: ${(props) => props.theme.colors.black};
       }
 
       div {
         width: 100%;
-        background-color: var(--light-gray);
+        background-color: ${(props) => props.theme.colors.light_gray};
         box-shadow: none;
         gap: 0.5rem;
 
         p {
           font-size: 1rem;
           font-weight: 400;
-          color: var(--black);
+          color: ${(props) => props.theme.colors.black};
         }
       }
     }

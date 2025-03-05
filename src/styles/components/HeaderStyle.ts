@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  background-color: var(--white);
+  background-color: ${(props) => props.theme.colors.white};
   gap: 0.5rem;
   padding: 1rem;
 
@@ -19,7 +19,7 @@ export const Container = styled.div`
   }
 
   h2 {
-    color: var(--blue);
+    color: ${(props) => props.theme.colors.blue};
     font-family: "Quicksand", sans-serif;
   }
 

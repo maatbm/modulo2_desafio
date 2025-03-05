@@ -7,8 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--white);
-  box-shadow: 0px 0px 10px var(--black);
+  background-color: ${(props) => props.theme.colors.white};
+  box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
   padding: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -18,7 +18,7 @@ export const Container = styled.div`
   }
 
   hr {
-    border: 3px solid var(--blue);
+    border: 3px solid ${(props) => props.theme.colors.blue};
   }
 
   div {
@@ -30,6 +30,6 @@ export const Container = styled.div`
     justify-content: center;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: var(--light-gray);
+    background-color: ${(props) => props.theme.colors.light_gray};
   }
 `;

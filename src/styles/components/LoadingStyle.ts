@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   h3 {
     font-size: 1.7rem;
-    color: var(--black);
+    color:${(props) => props.theme.colors.black};
   }
 
   > img {

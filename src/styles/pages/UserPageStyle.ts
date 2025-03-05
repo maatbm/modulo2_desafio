@@ -11,7 +11,7 @@ export const Main = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: var(--light-blue);
+  background-color: ${(props) => props.theme.colors.light_blue};
   padding: 2rem 3rem;
 
   @media screen and (max-width: 481px) {
@@ -24,13 +24,13 @@ export const Container = styled.div`
   height: 100%;
   border-radius: 0.5rem;
   padding: 3rem;
-  background-color: var(--white);
-  box-shadow: 0px 0px 10px var(--black);
+  background-color: ${(props) => props.theme.colors.white};
+  box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
 
   h1 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--black);
+    color: ${(props) => props.theme.colors.black};
     margin-bottom: 2rem;
   }
 
