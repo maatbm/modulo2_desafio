@@ -12,6 +12,10 @@ export const Container = styled.div`
     height: 40px;
     margin-left: 2rem;
     transiton: 0.5s;
+
+    @media screen and (max-width: 481px){
+      margin-left: 0.5rem;
+    }
   }
 
   h2 {
@@ -25,5 +29,9 @@ export const Container = styled.div`
     &:hover {
       transform: scale(1.2);
     }
+  }
+
+  @media screen and (max-width: 481px){
+    padding: 0.5rem;
   }
 `;

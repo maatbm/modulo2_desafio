@@ -8,6 +8,17 @@ export const Container = styled.div`
   padding: 1.5rem;
   border-radius: 0.5rem;
   border: 1px solid var(--black);
+
+  @media screen and (max-width: 481px) {
+    width: 100%;
+    padding: 0.6rem;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 482px) and (max-width: 1120px) {
+    width: 100%;
+    padding: 0.6rem;
+  }
 `;
 
 export const AvatarContainer = styled.div`
@@ -21,10 +32,36 @@ export const AvatarContainer = styled.div`
     padding: 0;
     margin: 0;
   }
+
+  @media screen and (max-width: 481px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media screen and (min-width: 482px) and (max-width: 1120px) {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
 `;
 
 export const AboutContainer = styled.div`
-  width: 60%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -44,5 +81,9 @@ export const AboutContainer = styled.div`
     font-weight: 400;
     color: var(--black);
     margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 1120px) and (min-width: 481px){
+    padding: 0.8rem;
   }
 `;

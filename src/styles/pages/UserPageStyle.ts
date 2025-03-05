@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface display{
+interface display {
   $display_div?: boolean;
 }
 
@@ -13,6 +13,10 @@ export const Main = styled.div`
   height: 100%;
   background-color: var(--light-blue);
   padding: 2rem 3rem;
+
+  @media screen and (max-width: 481px) {
+    padding: 1rem 0.7rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -30,7 +34,7 @@ export const Container = styled.div`
     margin-bottom: 2rem;
   }
 
-  > div { 
+  > div {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -39,6 +43,19 @@ export const Container = styled.div`
     border-radius: 0.5rem;
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width: 481px) {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    > div {
+      padding: 1rem;
+    }
+  }
 `;
 
 export const ReposContainer = styled.div<display>`
@@ -46,13 +63,21 @@ export const ReposContainer = styled.div<display>`
   height: 100%;
   padding: 0;
   border: none;
-  display:block;
-  
+  display: block;
+
   #RepoCard {
     width: 100%;
     height: 100%;
-    display: ${({$display_div})=>$display_div? "none":"grid"};
+    display: ${({ $display_div }) => ($display_div ? "none" : "grid")};
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+
+    @media screen and (max-width: 481px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width: 482px) and (max-width: 1120px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 `;
