@@ -10,6 +10,7 @@ export const Container = styled.div`
   background-color: var(--white);
   box-shadow: 0px 0px 10px var(--black);
   padding: 1rem;
+  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
