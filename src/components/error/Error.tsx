@@ -1,5 +1,5 @@
-import { Container } from "../styles/components/ErrorStyle";
-import logoErro from "../assets/error/aviso.png";
+import { Container } from "./ErrorStyle";
+import logoErro from "../../assets/error/aviso.png";
 
 interface ErrorProps {
   error: string | undefined;

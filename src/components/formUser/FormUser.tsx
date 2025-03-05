@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../contexts/UserContext";
-import { Error } from "./Error";
-import { Container } from "../styles/components/FormUserStyle";
-import { Loading } from "./Loading";
+import { UserContext } from "../../contexts/UserContext";
+import { Error } from "../error/Error";
+import { Container } from "./FormUserStyle";
+import { Loading } from "../loading/Loading";
 
 export function FormUser() {
   const [Username, setUsername] = useState<string>("");

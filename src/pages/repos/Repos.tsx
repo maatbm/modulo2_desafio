@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { RepoContext } from "../contexts/ReposContext";
+import { RepoContext } from "../../contexts/ReposContext";
 import { useParams } from "react-router-dom";
-import { Header } from "../components";
-import { Main, Container } from "../styles/pages/ReposStyle";
+import { Header } from "../../components";
+import { Main, Container } from "./ReposStyle";
 
 export function Repos() {
   const { repoID } = useParams();

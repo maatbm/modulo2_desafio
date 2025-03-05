@@ -2,7 +2,7 @@ import {
   Container,
   AvatarContainer,
   AboutContainer,
-} from "../styles/components/UserCardStyle";
+} from "./UserCardStyle";
 
 interface Props {
   avatar: string | undefined;

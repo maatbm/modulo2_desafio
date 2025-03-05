@@ -1,5 +1,5 @@
-import { Container } from "../styles/components/LoadingStyle";
-import spinImage from "../assets/loading/girar.png";
+import { Container } from "./LoadingStyle";
+import spinImage from "../../assets/loading/girar.png";
 
 export function Loading() {
   return (

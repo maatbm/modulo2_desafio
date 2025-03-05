@@ -1,4 +1,4 @@
-import { Container } from "../styles/components/RepoCardStyle";
+import { Container } from "./RepoCardStyle";
 import { useNavigate } from "react-router-dom";
 
 interface Props {

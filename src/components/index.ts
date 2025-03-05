@@ -1,6 +1,6 @@
-export { Error } from './Error';
-export { Loading } from './Loading';
-export { FormUser } from './FormUser';
-export { Header } from './Header';
-export { RepoCard } from './RepoCard';
-export { UserCard } from './UserCard';
+export { Error } from './error/Error';
+export { Loading } from './loading/Loading';
+export { FormUser } from './formUser/FormUser';
+export { Header } from './header/Header';
+export { RepoCard } from './repoCard/RepoCard';
+export { UserCard } from './userCard/UserCard';

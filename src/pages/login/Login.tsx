@@ -1,6 +1,6 @@
-import { FormUser } from "../components/index";
-import { Main, LogoContainer, FormContainer } from "../styles/pages/LoginStyle";
-import logo from "../assets/global/logo.png";
+import { FormUser } from "../../components/index";
+import { Main, LogoContainer, FormContainer } from "./LoginStyle";
+import logo from "../../assets/global/logo.png";
 
 export function Login() {
   return (

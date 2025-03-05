@@ -1,3 +1,3 @@
-export { Login } from './Login';
-export { UserPage } from './UserPage';
-export { Repos } from './Repos';
+export { Login } from './login/Login';
+export { UserPage } from './user/UserPage';
+export { Repos } from './repos/Repos';
