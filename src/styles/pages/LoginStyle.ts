@@ -15,7 +15,7 @@ export const LogoContainer = styled.div`
   gap: 1rem;
   width: 65%;
   height: 100%;
-  background-color: var(--blue)};
+  background-color: var(--blue);
 
   h1 {
     font-size: 5rem;
@@ -28,6 +28,14 @@ export const LogoContainer = styled.div`
     width: 70px;
     height: 70px;
   }
+
+  @media screen and (max-width: 481px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1279px) and (min-width: 482px) {
+    width: 50%;
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -38,4 +46,12 @@ export const FormContainer = styled.div`
   width: 35%;
   height: 100%;
   background-color: var(--white);
+
+  @media screen and (max-width: 481px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1279px) and (min-width: 482px) {
+    width: 50%;
+  }
 `;

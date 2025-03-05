@@ -40,7 +40,7 @@ export const Container = styled.div<Props>`
       height: 2rem;
       border: 2px solid var(--gray);
       border-radius: 5px;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: var(--black);
       font-family: "Inter", sans-serif;
       text-align: center;
@@ -64,5 +64,9 @@ export const Container = styled.div<Props>`
       }
     }
   }
+
+  @media screen and (max-width: 481px) {
+    width: 85%;
+  } 
 `;
 
