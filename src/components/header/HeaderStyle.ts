@@ -25,6 +25,7 @@ export const Container = styled.div`
 
   #goBack {
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       transform: scale(1.2);

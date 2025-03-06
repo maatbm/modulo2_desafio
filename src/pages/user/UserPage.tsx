@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { Header, Loading, RepoCard, UserCard } from "../../components/index";
 import { RepoContext } from "../../contexts/ReposContext";
-import { Container, Main, ReposContainer } from "./UserPageStyle";
+import { Container, Main, ReposContainer, RepoCardContainer } from "./UserPageStyle";
 
 export function UserPage() {
   const userContext = useContext(UserContext);
@@ -28,10 +28,10 @@ export function UserPage() {
             />
           </div>
           <h1>Repositórios</h1>
-          <ReposContainer $display_div={repoContext?.loading}>
+          <ReposContainer>
             {repoContext?.loading && <Loading />}
             {repoContext?.error && <p>{repoContext?.error}</p>}
-            <div id="RepoCard">
+            <RepoCardContainer $display_div={repoContext?.loading}>
               {repoContext?.repos.map((repo, index) => (
                 <RepoCard
                   key={repo.id}
@@ -41,7 +41,7 @@ export function UserPage() {
                   id={repo.id}
                 />
               ))}
-            </div>
+            </RepoCardContainer>
           </ReposContainer>
         </Container>
       </Main>

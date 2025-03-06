@@ -38,6 +38,11 @@ export const CloseModal = styled.div<CloseModalProps>`
     width: 100%;
     height: 100%;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   @media screen and (max-width: 600px) {
