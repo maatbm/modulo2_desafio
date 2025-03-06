@@ -67,6 +67,14 @@ export const Container = styled.div<Props>`
 
   @media screen and (max-width: 481px) {
     width: 85%;
-  } 
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 857px) {
+    input {
+      &::placeholder {
+        font-size: 0.5rem;
+      }
+    }
+  }
 `;
 

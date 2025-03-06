@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { RepoContext } from "../../contexts/ReposContext";
 import { useParams } from "react-router-dom";
 import { Header } from "../../components";
@@ -8,6 +8,10 @@ export function Repos() {
   const { repoID } = useParams();
   const repoContext = useContext(RepoContext);
   const repo = repoContext?.repos.find((repo) => repo.id === Number(repoID));
+
+  useEffect(() => {
+    scrollTo(0,0);
+  })
 
   return (
     <>

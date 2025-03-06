@@ -28,7 +28,7 @@ export function FormUser() {
           <input
             id="UserInput0"
             type="text"
-            placeholder="Insira um usuário do GitHub"
+            placeholder="Digite aqui seu usuário do GitHub"
             onChange={(e) => setUsername(e.target.value)}
             autoComplete="off"
           />
