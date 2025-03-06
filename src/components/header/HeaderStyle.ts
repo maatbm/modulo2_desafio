@@ -8,22 +8,18 @@ export const Container = styled.div`
   padding: 1rem;
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 190px;
+    height: auto;
     margin-left: 2rem;
-    transiton: 0.5s;
 
     @media screen and (max-width: 481px){
       margin-left: 0.5rem;
     }
   }
 
-  h2 {
-    color: ${(props) => props.theme.colors.blue};
-    font-family: "Quicksand", sans-serif;
-  }
-
   #goBack {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 

@@ -17,16 +17,9 @@ export const LogoContainer = styled.div`
   height: 100%;
   background-color: ${(props) => props.theme.colors.blue};
 
-  h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    color: ${(props) => props.theme.colors.white};
-    font-family: "Quicksand", sans-serif;
-  }
-
   img {
-    width: 70px;
-    height: 70px;
+    width: 50%;
+    height: auto;
   }
 
   @media screen and (max-width: 481px) {
@@ -35,10 +28,6 @@ export const LogoContainer = styled.div`
 
   @media screen and (max-width: 1279px) and (min-width: 482px) {
     width: 50%;
-
-    h1 {
-      font-size: 3rem;
-    }
   }
 `;
 

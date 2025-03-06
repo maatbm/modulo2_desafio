@@ -1,6 +1,6 @@
 import { FormUser } from "../../components/index";
 import { Main, LogoContainer, FormContainer } from "./LoginStyle";
-import logo from "../../assets/global/logo.png";
+import logo from "../../assets/login/logoLogin.png";
 
 export function Login() {
   return (
@@ -8,7 +8,6 @@ export function Login() {
       <Main>
         <LogoContainer>
           <img src={logo} alt="logo da wtech" />
-          <h1>wtech</h1>
         </LogoContainer>
         <FormContainer>
           <FormUser />
