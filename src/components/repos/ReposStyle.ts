@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 60%;
+  width: 80%;
   height: 100%;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -66,6 +66,7 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    width: 100%;
     padding: 1rem;
 
     h1 {
@@ -101,6 +102,7 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: 600px) and (max-width: 1120px) {
+    width: 100%;
     padding: 1rem;
 
     > div {

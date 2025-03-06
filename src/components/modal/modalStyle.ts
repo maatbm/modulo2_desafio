@@ -20,7 +20,7 @@ export const Container = styled.div`
   z-index: 99;
 
   @media screen and (max-width: 600px) {
-    padding: 1rem 0.7rem;
+    padding: 0.5rem;
   }
 `;
 
@@ -38,5 +38,9 @@ export const CloseModal = styled.div<CloseModalProps>`
     width: 100%;
     height: 100%;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0.2rem;
   }
 `;
