@@ -11,7 +11,7 @@ export const Main = styled.div`
   background-color: ${(props) => props.theme.colors.light_blue};
   padding: 2rem 3rem;
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 600px) {
     padding: 1rem 0.7rem;
   }
 `;
@@ -81,7 +81,7 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 600px) {
     padding: 1rem;
 
     h1 {
@@ -116,7 +116,7 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 576px) and (max-width: 1120px) {
+  @media screen and (min-width: 600px) and (max-width: 1120px) {
     padding: 1rem;
 
     > div {
