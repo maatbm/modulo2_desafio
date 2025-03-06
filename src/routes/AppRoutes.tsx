@@ -8,7 +8,6 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/user/:username" element={<RepoContextProvider><UserPage /></RepoContextProvider>} />
-        <Route path="/repo/:repoID" element={<RepoContextProvider><Repos /></RepoContextProvider>} />
       </Routes>
     </BrowserRouter>
   );

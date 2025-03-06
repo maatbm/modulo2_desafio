@@ -1,26 +1,10 @@
 import styled from "styled-components";
 
-export const Main = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  max-height: 100%;
-  background-color: ${(props) => props.theme.colors.light_blue};
-  padding: 2rem 3rem;
-
-  @media screen and (max-width: 600px) {
-    padding: 1rem 0.7rem;
-  }
-`;
-
 export const Container = styled.div`
-  width: 100%;
+  width: 60%;
   height: 100%;
   border-radius: 0.5rem;
-  padding: 3rem;
+  padding: 1rem;
   background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
 
@@ -51,7 +35,7 @@ export const Container = styled.div`
       align-items: flex-start;
       justify-content: center;
       gap: 1rem;
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: 0.5rem;
       box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
 
