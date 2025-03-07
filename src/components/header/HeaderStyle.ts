@@ -4,18 +4,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   background-color: ${(props) => props.theme.colors.white};
-  padding: 1rem;
+  padding: 0.5rem;
 
   img {
-    width: 190px;
+    width: 170px;
     height: auto;
-
-    @media screen and (max-width: 481px){
-      margin-left: 0.5rem;
-    }
-  }
-
-  @media screen and (max-width: 481px){
-    padding: 0.5rem;
   }
 `;
