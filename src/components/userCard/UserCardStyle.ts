@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 1.5rem;
   border-radius: 0.5rem;
   gap: 1.5rem;
-  border: 1px solid ${(props) => props.theme.colors.black};
+  border: 2px solid ${(props) => props.theme.colors.light_blue};
 
   @media screen and (max-width: 719px) {
     width: 100%;
@@ -71,9 +71,9 @@ export const AboutContainer = styled.div`
   padding: 0;
 
   h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: ${(props) => props.theme.colors.black};
+    font-size: 1rem;
+    color: ${(props) => props.theme.colors.gray};
+    font-weight: 400;
     margin-bottom: 0.5rem;
   }
 
@@ -84,8 +84,11 @@ export const AboutContainer = styled.div`
     margin-bottom: 1rem;
   }
 
+  #name_user {
+    font-weight: bolder;
+  }
+
   @media screen and (max-width: 1120px) and (min-width: 719px) {
     padding: 0.8rem;
   }
 `;
-  
