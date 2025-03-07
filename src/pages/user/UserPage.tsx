@@ -35,7 +35,7 @@ export function UserPage() {
               {repoContext?.repos.map((repo, index) => (
                 <RepoCard
                   key={repo.id}
-                  name={repo.name}
+                  link={repo.html_url}
                   description={repo.description || "Sem descrição"}
                   index={(index+1)}
                   id={repo.id}

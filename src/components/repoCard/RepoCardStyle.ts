@@ -9,7 +9,6 @@ export const Container = styled.div`
   border-radius: 0.5rem;
   background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
-  padding: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 
@@ -18,18 +17,33 @@ export const Container = styled.div`
   }
 
   hr {
-    border: 3px solid ${(props) => props.theme.colors.blue};
+    border: 2px solid ${(props) => props.theme.colors.blue};
   }
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
   div {
     width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 0.5rem;
     border-radius: 0.5rem;
     background-color: ${(props) => props.theme.colors.light_gray};
+
+    p {
+      font-size: 1;
+      font-weight: 400;
+      color: ${(props) => props.theme.colors.gray};
+      margin-bottom: 0.5rem;
+    }
   }
 `;

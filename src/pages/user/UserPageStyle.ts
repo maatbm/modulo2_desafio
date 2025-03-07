@@ -11,7 +11,7 @@ export const Main = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.colors.light_blue};
+  background-color: ${(props) => props.theme.colors.light_gray};
   padding: 2rem 3rem;
 
   @media screen and (max-width: 719px) {

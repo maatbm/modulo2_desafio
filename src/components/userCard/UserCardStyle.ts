@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 1.5rem;
   border-radius: 0.5rem;
   gap: 1.5rem;
-  border: 2px solid ${(props) => props.theme.colors.light_blue};
+  border: 3px solid ${(props) => props.theme.colors.light_blue};
 
   @media screen and (max-width: 719px) {
     width: 100%;

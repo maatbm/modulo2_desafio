@@ -10,7 +10,7 @@ const theme = {
     dark_blue: "#002D6B",
     orange: "#FF1D00",
     light_blue: "#E5F3FD",
-    light_gray: "#DDDDDD",
+    light_gray: "#F5F5F5",
   },
 };
 
