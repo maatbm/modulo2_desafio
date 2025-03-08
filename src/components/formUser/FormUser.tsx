@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../contexts/UserContext";
+import { UserContext } from "../../contexts";
 import { Error, Loading } from "../"
 import { Container } from "./FormUserStyle";
 

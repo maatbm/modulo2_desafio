@@ -1,6 +1,7 @@
-import { Container,Content } from "./RepoCardStyle";
-import { useState } from "react";
-import { Modal, Repos } from "../"
+import { Container, Content } from "./RepoCardStyle";
+import { useContext } from "react";
+import { Modal, Repos } from "../";
+import { ModalContext } from "../../contexts";
 import { CloseModal } from "../modal/modalStyle";
 import closeLogo from "../../assets/repoCard/close.png";
 
@@ -12,15 +13,15 @@ interface Props {
 }
 
 export function RepoCard(RepoData: Props) {
-  const [modal, setModal] = useState(false);
+  const modalContext = useContext(ModalContext);
 
-  function getShortDescription(description: string){
+  function getShortDescription(description: string) {
     return description.split(" ").slice(0, 7).join(" ");
-  };
+  }
 
   return (
     <>
-      <Container role="button" onClick={() => {setModal(true);}}>
+      <Container role="button" onClick={() => {modalContext.setModal(true)}}>
         <Content>
           <h3>Repositório {RepoData.index}</h3>
         </Content>
@@ -36,11 +37,11 @@ export function RepoCard(RepoData: Props) {
           </div>
         </Content>
       </Container>
-      <Modal isOpen={modal}>
-        <CloseModal isOpen={modal} onClick={() => {setModal(false);}}>
+      <Modal isOpen={modalContext.modal}>
+        <CloseModal isOpen={modalContext.modal} onClick={() => {modalContext.setModal(false)}}>
           <img src={closeLogo} alt="close" />
         </CloseModal>
-        <Repos repoID={RepoData.id} index={RepoData.index}/>
+        <Repos repoID={RepoData.id} index={RepoData.index} />
       </Modal>
     </>
   );

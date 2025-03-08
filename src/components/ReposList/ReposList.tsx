@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { RepoContext } from "../../contexts/ReposContext";
-import { UserContext } from "../../contexts/UserContext";
+import { RepoContext, UserContext, ModalProvider } from "../../contexts";
 import { Loading, RepoCard } from "../index";
 import { ReposContainer, RepoCardContainer, NavButton, NavigationContainer } from "./RepoListStyle";
 import arrow_right from "../../assets/repoList/arrow-right.png";
@@ -54,15 +53,17 @@ export function ReposList() {
         {repoContext?.loading && <Loading />}
         {repoContext?.error && <p>{repoContext?.error}</p>}
         <RepoCardContainer $display_div={repoContext?.loading} $direction={direction}>
-          {currentRepos.map((repo, index) => (
-            <RepoCard
-              key={repo.id}
-              link={repo.html_url}
-              description={repo.description || "Sem descrição"}
-              index={indexOfFirstRepo + index + 1}
-              id={repo.id}
-            />
-          ))}
+          <ModalProvider>
+            {currentRepos.map((repo, index) => (
+              <RepoCard
+                key={repo.id}
+                link={repo.html_url}
+                description={repo.description || "Sem descrição"}
+                index={indexOfFirstRepo + index + 1}
+                id={repo.id}
+              />
+            ))}
+          </ModalProvider>
         </RepoCardContainer>
       </ReposContainer>
     </>

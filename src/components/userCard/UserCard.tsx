@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../../contexts/UserContext";
+import { UserContext } from "../../contexts";
 import { Container, AvatarContainer, AboutContainer } from "./UserCardStyle";
 
 export function UserCard() {

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { RepoContext } from "../../contexts/ReposContext";
+import { RepoContext } from "../../contexts";
 import { Container } from "./ReposStyle";
 
 interface Props {
