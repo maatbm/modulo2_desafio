@@ -94,7 +94,6 @@ export const Container = styled.div`
 
   @media screen and (max-width: 600px) {
     width: 100%;
-    padding: 1rem;
 
     h1 {
       font-size: 1.5rem;
@@ -121,6 +120,14 @@ export const Container = styled.div`
           }
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1120px) {
+    > div {
+      div {
+        width: 90%;
+      } 
     }
   }
 `;
