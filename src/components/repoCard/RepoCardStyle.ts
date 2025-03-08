@@ -45,5 +45,9 @@ export const Content = styled.div`
       color: ${(props) => props.theme.colors.gray};
       margin-bottom: 0.5rem;
     }
+
+    a {
+      color: ${(props) => props.theme.colors.black};
+    }
   }
 `;

@@ -25,7 +25,7 @@ export function RepoCard(RepoData: Props) {
         <Content>
           <div>
             <p>Link</p>
-            <h5>{RepoData.link}</h5>
+            <h5><a href={RepoData.link} target="_blank">{RepoData.link}</a></h5>
           </div>
           <div>
             <p>Descrição</p>

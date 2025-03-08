@@ -1,29 +1,23 @@
-import {
-  Container,
-  AvatarContainer,
-  AboutContainer,
-} from "./UserCardStyle";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
+import { Container, AvatarContainer, AboutContainer } from "./UserCardStyle";
 
-interface Props {
-  avatar: string | undefined;
-  name: string | undefined;
-  bio: string | undefined;
-}
+export function UserCard() {
+  const userContext = useContext(UserContext);
 
-export function UserCard(UserData: Props) {
   return (
     <>
-    <Container>
-      <AvatarContainer>
-        <img src={UserData.avatar} alt="Avatar" />
-      </AvatarContainer>
-      <AboutContainer>
-        <h3>Nome</h3>
-        <p id="name_user">{UserData.name}</p>
-        <h3>Bio</h3>
-        <p>{UserData.bio === null? "-----": UserData.bio}</p>
-      </AboutContainer>
-    </Container>
+      <Container>
+        <AvatarContainer>
+          <img src={userContext?.userData?.avatar_url} alt="Avatar" />
+        </AvatarContainer>
+        <AboutContainer>
+          <h3>Nome</h3>
+          <p id="name_user">{userContext?.userData?.name}</p>
+          <h3>Bio</h3>
+          <p>{userContext?.userData?.bio === null ? "-----" : userContext?.userData?.bio}</p>
+        </AboutContainer>
+      </Container>
     </>
   );
 }
