@@ -36,6 +36,7 @@ export const FormContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   width: 35%;
   height: 100%;
   background-color: ${(props) => props.theme.colors.white};

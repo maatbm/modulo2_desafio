@@ -11,7 +11,6 @@ export const Container = styled.div<Props>`
   align-items: center;
   justify-content: center;
   width: 60%;
-  height: 80%;
 
   h1 {
     font-size: 2.5rem;
@@ -56,7 +55,7 @@ export const Container = styled.div<Props>`
       color: ${(props) => props.theme.colors.white};
       font-size: 1.2rem;
       font-weight: bold;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       transition: 0.3s;
 
       &:hover {

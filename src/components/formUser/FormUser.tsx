@@ -20,9 +20,9 @@ export function FormUser() {
   return (
     <>
       {userContext?.loading && <Loading />}
+      {userContext?.error?.status && <Error error={userContext.error.message} />}
       <Container $display_container={userContext?.loading} $display_h1={userContext?.error?.status}>
         <h1>Entrar</h1>
-        {userContext?.error?.status && <Error error={userContext.error.message} />}
         <div>
           <label htmlFor="UserInput0">Usuário</label>
           <input

@@ -1,4 +1,4 @@
-import { Container } from "./ErrorStyle";
+import { ErrorContainer } from "./ErrorStyle";
 import logoErro from "../../assets/error/aviso.png";
 
 interface ErrorProps {
@@ -7,12 +7,12 @@ interface ErrorProps {
 
 export function Error({ error }: ErrorProps) {
   return (
-    <Container>
+    <ErrorContainer>
       <img src={logoErro} alt="Erro" />
       <div>
-        <h2>Ops!</h2>
+        <h3>Ops!</h3>
         <p>{error}</p>
       </div>
-    </Container>
+    </ErrorContainer>
   );
 }
