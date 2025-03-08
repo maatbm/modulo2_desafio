@@ -6,3 +6,4 @@ export { RepoCard } from './repoCard/RepoCard';
 export { UserCard } from './userCard/UserCard';
 export { Modal } from './modal/Modal';
 export { Repos } from './repos/Repos';
+export { ReposList } from './ReposList/ReposList'

@@ -1,8 +1,7 @@
 import { Container,Content } from "./RepoCardStyle";
 import { useState } from "react";
-import { Modal } from "../modal/Modal";
+import { Modal, Repos } from "../"
 import { CloseModal } from "../modal/modalStyle";
-import { Repos } from "../repos/Repos";
 import closeLogo from "../../assets/repoCard/close.png";
 
 interface Props {

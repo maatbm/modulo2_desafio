@@ -25,14 +25,14 @@ export function ReposList() {
     }
   }, []);
 
-  const nextPage = () => {
+  function nextPage(){
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
       setDirection('next');
     }
   };
 
-  const prevPage = () => {
+  function prevPage(){
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
       setDirection('prev');

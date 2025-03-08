@@ -1,4 +1,4 @@
-import { FormUser } from "../../components/index";
+import { FormUser } from "../../components";
 import { Main, LogoContainer, FormContainer } from "./LoginStyle";
 import logo from "../../assets/login/logoLogin.png";
 
