@@ -41,7 +41,7 @@ export const Container = styled.div`
 
       hr {
         width: 100%;
-        border: 3px solid ${(props) => props.theme.colors.blue};
+        border: 1px solid ${(props) => props.theme.colors.gray};
       }
 
       h2 {

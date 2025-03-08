@@ -15,6 +15,10 @@ interface Props {
 export function RepoCard(RepoData: Props) {
   const [modal, setModal] = useState(false);
 
+  function getShortDescription(description: string){
+    return description.split(" ").slice(0, 7).join(" ");
+  };
+
   return (
     <>
       <Container role="button" onClick={() => {setModal(true);}}>
@@ -29,7 +33,7 @@ export function RepoCard(RepoData: Props) {
           </div>
           <div>
             <p>Descrição</p>
-            <span>{RepoData.description}</span>
+            <span>{getShortDescription(RepoData.description)}...</span>
           </div>
         </Content>
       </Container>
@@ -37,7 +41,7 @@ export function RepoCard(RepoData: Props) {
         <CloseModal isOpen={modal} onClick={() => {setModal(false);}}>
           <img src={closeLogo} alt="close" />
         </CloseModal>
-        <Repos repoID={RepoData.id} />
+        <Repos repoID={RepoData.id} index={RepoData.index}/>
       </Modal>
     </>
   );

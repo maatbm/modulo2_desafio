@@ -4,9 +4,10 @@ import { Container } from "./ReposStyle";
 
 interface Props {
   repoID: number;
+  index: number;
 }
 
-export function Repos({ repoID }: Props) {
+export function Repos({ repoID, index }: Props) {
   const repoContext = useContext(RepoContext);
   const repo = repoContext?.repos.find((repo) => repo.id === Number(repoID));
 
@@ -16,7 +17,7 @@ export function Repos({ repoID }: Props) {
         <h1>Especificações</h1>
         <div>
           <div>
-            <h2>{repo?.name}</h2>
+            <h2>Repositório {index}</h2>
             <hr />
             <div>
               <h4>URL</h4>
