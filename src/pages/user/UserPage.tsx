@@ -13,7 +13,6 @@ export function UserPage() {
           <div>
             <UserCard />
           </div>
-          <h1>Repositórios</h1>
           <ReposList />
         </Container>
       </Main>

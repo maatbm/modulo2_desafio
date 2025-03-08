@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,13 +23,6 @@ export const Container = styled.div`
   padding: 3rem;
   background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: ${(props) => props.theme.colors.black};
-    margin-bottom: 2rem;
-  }
 
   > div {
     width: 100%;

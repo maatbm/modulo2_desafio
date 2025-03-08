@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-interface display {
+interface RepoCardContainerProps {
   $display_div?: boolean;
+  $direction?: 'next' | 'prev' | null;
 }
 
 export const ReposContainer = styled.div`
@@ -12,7 +13,36 @@ export const ReposContainer = styled.div`
   display: block;
 `;
 
-export const RepoCardContainer = styled.div<display>`
+export const NavigationContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+   h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: ${(props) => props.theme.colors.black};
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+
+    span {
+      font-weight: 400;
+      color: ${(props) => props.theme.colors.gray};
+    }
+  }
+`;
+
+export const NavButton = styled.button`
+  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+  opacity: ${props => props.disabled ? 0.5 : 1};
+`;
+
+export const RepoCardContainer = styled.div<RepoCardContainerProps>`
   width: 100%;
   height: 100%;
   display: ${({ $display_div }) => ($display_div ? "none" : "grid")};
@@ -25,5 +55,44 @@ export const RepoCardContainer = styled.div<display>`
 
   @media screen and (min-width: 719px) and (max-width: 1120px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  & > * {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  ${props => props.$direction === 'next' && css`
+    & > * {
+      animation-name: slideInFromRight;
+    }
+  `}
+
+  ${props => props.$direction === 'prev' && css`
+    & > * {
+      animation-name: slideInFromLeft;
+    }
+  `}
+
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 `;
