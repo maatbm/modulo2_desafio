@@ -9,11 +9,10 @@ export const Container = styled.div`
   min-height: 100vh;
   max-height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  padding: 3rem;
+  gap: 2rem;
+  background-color: ${(props)=>props.theme.colors.light_gray};
   position: fixed;
   top: 0;
   left: 0;
