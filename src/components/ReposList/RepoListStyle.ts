@@ -40,6 +40,13 @@ export const NavigationContainer = styled.div`
 export const NavButton = styled.button`
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   opacity: ${props => props.disabled ? 0.5 : 1};
+  background-color: transparent;
+  border: none;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export const RepoCardContainer = styled.div<RepoCardContainerProps>`

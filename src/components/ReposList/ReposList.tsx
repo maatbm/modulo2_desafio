@@ -3,25 +3,27 @@ import { RepoContext } from "../../contexts/ReposContext";
 import { UserContext } from "../../contexts/UserContext";
 import { Loading, RepoCard } from "../index";
 import { ReposContainer, RepoCardContainer, NavButton, NavigationContainer } from "./RepoListStyle";
+import arrow_right from "../../assets/repoList/arrow-right.png";
+import arrow_left from "../../assets/repoList/arrow-left.png";
 
 export function ReposList() {
   const repoContext = useContext(RepoContext);
   const userContext = useContext(UserContext);
   const [currentPage, setCurrentPage] = useState(1);
   const reposPerPage = 3;
-
-  useEffect(() => {
-    if (userContext?.userData) {
-      repoContext?.fetchRepos(userContext?.userData.login);
-    }
-  }, []);
-
   const totalRepos = repoContext?.repos?.length || 0;
   const indexOfLastRepo = currentPage * reposPerPage;
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepos = repoContext?.repos?.slice(indexOfFirstRepo, indexOfLastRepo) || [];
   const totalPages = Math.ceil(totalRepos / reposPerPage);
   const [direction, setDirection] = useState<'next' | 'prev' | null>(null);
+  const displayedRepos = Math.min(indexOfLastRepo, totalRepos);
+
+  useEffect(() => {
+    if (userContext?.userData) {
+      repoContext?.fetchRepos(userContext?.userData.login);
+    }
+  }, []);
 
   const nextPage = () => {
     if (currentPage < totalPages) {
@@ -37,14 +39,15 @@ export function ReposList() {
     }
   };
 
+
   return (
     <>
       <NavigationContainer>
         <h1>Repositórios</h1>
         <div>
-          <span>{currentPage} de {totalPages}</span>
-          <NavButton onClick={prevPage} disabled={currentPage === 1}>Anterior</NavButton>
-          <NavButton onClick={nextPage} disabled={currentPage === totalPages}>Próximo</NavButton>
+          <span>{displayedRepos} de {totalRepos}</span>
+          <NavButton onClick={prevPage} disabled={currentPage === 1}><img src={arrow_left} alt="Anterior" /></NavButton>
+          <NavButton onClick={nextPage} disabled={currentPage === totalPages}><img src={arrow_right} alt="Próximo"/></NavButton>
         </div>
       </NavigationContainer>
       <ReposContainer>
