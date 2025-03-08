@@ -12,7 +12,7 @@ export const Container = styled.div`
     font-size: 2rem;
     font-weight: 700;
     color: ${(props) => props.theme.colors.black};
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: "Quicksand", sans-serif;
   }
 
@@ -23,9 +23,28 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
+
+    #title_container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: ${(props) => props.theme.colors.white};
+
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
 
     div {
       width: 65%;
@@ -44,7 +63,7 @@ export const Container = styled.div`
         border: 1px solid ${(props) => props.theme.colors.gray};
       }
 
-      h2 {
+      h3 {
         font-size: 1.5rem;
         font-weight: 700;
         color: ${(props) => props.theme.colors.black};

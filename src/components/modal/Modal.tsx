@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { Container } from "./modalStyle";
 import { Header } from "../";
 
@@ -9,16 +9,6 @@ interface ModalProps {
 }
 
 export function Modal({ children, isOpen }: ModalProps) {
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
 
   if (!isOpen) {
     return null;

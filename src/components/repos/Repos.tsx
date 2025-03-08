@@ -1,15 +1,12 @@
 import { useContext } from "react";
-import { RepoContext } from "../../contexts";
+import { RepoContext, ModalContext } from "../../contexts";
 import { Container } from "./ReposStyle";
+import close from "../../assets/repos/close.png";
 
-interface Props {
-  repoID: number;
-  index: number;
-}
-
-export function Repos({ repoID, index }: Props) {
+export function Repos() {
   const repoContext = useContext(RepoContext);
-  const repo = repoContext?.repos.find((repo) => repo.id === Number(repoID));
+  const modalContext = useContext(ModalContext);
+  const repo = repoContext?.repos.find((repo) => repo.id === modalContext.repoID);
 
   return (
     <>
@@ -17,7 +14,10 @@ export function Repos({ repoID, index }: Props) {
         <h1>Especificações</h1>
         <div>
           <div>
-            <h2>Repositório {index}</h2>
+            <div id="title_container">
+              <h3>Repositório {modalContext.index}</h3>
+              <img src={close} alt="Fechar modal" onClick={()=>{modalContext.setModal(false)}} />
+            </div>
             <hr />
             <div>
               <h4>URL</h4>
