@@ -8,6 +8,7 @@ export const ErrorContainer = styled.div`
   align-items: center;
   background-color: ${(props) => props.theme.colors.orange};
   border-radius: 1.5rem;
+  padding: 0.5rem;
 
   img {
     width: 50px;
@@ -22,5 +23,9 @@ export const ErrorContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1rem;
+  }
+
+  @media screen and (max-width: 600px){
+    width: 90%;
   }
 `;

@@ -21,9 +21,7 @@ export function Repos() {
             <hr />
             <div>
               <h4>URL</h4>
-              <a href={repo?.html_url} target="_blank">
-                <p>{repo?.html_url}</p>
-              </a>
+              <a href={repo?.html_url} target="_blank"><p>{repo?.html_url}</p></a>
             </div>
             <div>
               <h4>Privacidade</h4>

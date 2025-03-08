@@ -28,4 +28,4 @@ export const ModalProvider = ({ children }: any) => {
       {children}
     </ModalContext.Provider>
   );
-};
+}

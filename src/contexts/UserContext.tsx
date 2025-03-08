@@ -53,7 +53,7 @@ export const UserContextProvider = ({children}: {children: React.ReactNode}) => 
         setUserData(formattedUser);
         return formattedUser.login;
       } catch (err) {
-        setError({status: true, message: "Erro ao buscar usuário"});
+        setError({status: true, message: "Não conseguimos identificar sua conta"});
       } finally {
         setLoading(false);
       }

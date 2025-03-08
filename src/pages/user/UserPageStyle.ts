@@ -35,7 +35,7 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 719px) {
-    padding: 1rem;
+    padding: 0.5rem;
 
     h1 {
       font-size: 1.5rem;
@@ -43,7 +43,7 @@ export const Container = styled.div`
     }
 
     > div {
-      padding: 1rem;
+      padding: 0.5rem;
     }
   }
 `;

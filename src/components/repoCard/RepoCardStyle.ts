@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   border-radius: 0.5rem;
   background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
@@ -24,7 +24,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 100%;
   height: fit-content;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -40,7 +40,7 @@ export const Content = styled.div`
     background-color: ${(props) => props.theme.colors.light_gray};
 
     p {
-      font-size: 1;
+      font-size: 1rem;
       font-weight: 400;
       color: ${(props) => props.theme.colors.gray};
       margin-bottom: 0.5rem;
@@ -48,6 +48,10 @@ export const Content = styled.div`
 
     a {
       color: ${(props) => props.theme.colors.black};
+      font-size: 0.8rem;
+      word-break: break-all; 
+      overflow-wrap: break-word;
+      white-space: normal;
     }
   }
 `;

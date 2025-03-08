@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 80%;
-  height: 100%;
+  min-height: 100vh;
+  max-height: 100%;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 0px 10px ${(props) => props.theme.colors.black};
 
@@ -80,6 +81,13 @@ export const Container = styled.div`
           font-weight: 400;
           color: ${(props) => props.theme.colors.black};
         }
+
+        a {
+          word-break: break-all;
+          overflow-wrap: break-word;
+          white-space: normal;
+          color: ${(props) => props.theme.colors.black};
+        }
       }
     }
   }
@@ -111,30 +119,6 @@ export const Container = styled.div`
           h4 {
             font-size: 1rem;
           }
-
-          p {
-            font-size: 0.6rem;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 600px) and (max-width: 1120px) {
-    width: 100%;
-    padding: 1rem;
-
-    > div {
-      div {
-        width: 100%;
-        padding: 1rem;
-
-        h2 {
-          font-size: 1.2rem;
-        }
-
-        div {
-          width: 100%;
         }
       }
     }
