@@ -70,7 +70,7 @@ export const RepoCardContainer = styled.div<RepoCardContainerProps>`
   height: 100%;
   display: ${({ $display_div }) => ($display_div ? "none" : "grid")};
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2.5rem;
 
   & > * {
     animation-duration: 0.3s;
